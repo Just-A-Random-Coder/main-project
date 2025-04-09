@@ -1,0 +1,75 @@
+/*
+Made by Om Kanabar
+© Om Kanabar 2025 
+*/
+html,
+body{
+    background-color:#323b3d;
+    margin: 0;
+    font-family: Josefin Sans;
+    color: aliceblue;
+}
+.topnav{
+    overflow: hidden;
+    background-color: #062a47;
+    font-size: 30px;
+}
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 26px;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 17px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth effect */
+}
+
+.topnav a:hover {
+    background-color: #b8d9e0;
+    color: #062a47;
+}
+.topnav a.active{
+    background-color:#1a4b73;
+    color:#f2f2f2;
+}
+.maintitle{
+    background-color:#b8d9e0;
+    color:#062a47;
+    font-size:150px;
+    font-family: Monoton;
+    text-align:center;
+}
+.submain{
+    background-color:#b8d9e0;
+    color:black;
+    font-family: Josefin Sans;
+    font-size:20px;
+    text-align:center;
+}
+#addTaskbtn{
+    width:98%;
+    margin:1%;
+    margin-top: -0.5%;
+}
+h2{
+    text-align: center;
+}
+.delete-btn {
+    background: none;
+    border: none;
+    color: red !important;
+    font-size: 14px;
+    padding: 4px;
+    cursor: pointer;
+    /*display: none; Initially hidden */
+    align-items: center;
+}
+.delete-btn i {
+    font-size: 20px !important; /* Smaller icon */
+}
+.delete-btn:hover,
+.delete-btn:hover i {
+    color: rgb(185, 0, 0) !important;
+    transition: 0.15s ease-in-out;
+}
