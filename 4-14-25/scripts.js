@@ -15,170 +15,29 @@ input.addEventListener("keydown", function(event) {
         addItems()
         randomHolder()
     }
+    text1()
 
 })
 
-function timeToUseable(string){
-    const inputTime = document.getElementById("meetingTime")
-    let inTimeM = inputTime.value()
-    let ymde = inTimeM.split("-")
-    let year = ymde[0]
-    let month = ymde[1]
-    let dateetc = ymde[2]
-    let de = dateetc.split("T")
-    let date = de[0]
-    let etc = de[1]
-    let etcd = etc.split(":")
-    let hours = etcd[0]
-    let minutes = etcd[1]
-    let date = `${}`
-    /* 2018-06-07T00:00 */
+input.addEventListener("mousemove",function(event){
+    text1()
+} )
+function timeCheck() {
+    // Get the checkbox
+    var checkBox = document.getElementById("timeBox");
+    // Get the output text
+    var text = document.getElementById("datetime");
+
+    // If the checkbox is checked, display the output text
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+        text.style.display = "none";
+    }
 }
 
 function randomHolder() {
-    const placeHolders = [
-        "Do math homework",
-        "Email boss",
-        "Take a break",
-        "Prep for Debate",
-        "Try and figure what's wrong with Tabroom",
-        "Finish that lego set",
-        "Learn something new",
-        "Journal",
-        "Congratulate myself",
-        "Read a chapter of a book",
-        "Call a friend",
-        "Watch an educational video",
-        "Go for a walk",
-        "Write a letter to someone",
-        "Organize your workspace",
-        "Make a to-do list",
-        "Meditate for 10 minutes",
-        "Plan your week",
-        "Learn a new skill online",
-        "Clean out your email inbox",
-        "Write down a dream or goal",
-        "Practice a hobby",
-        "Stretch and do some light exercise",
-        "Try a new recipe",
-        "Plan your meals for the week",
-        "Sort through old clothes",
-        "Listen to a podcast",
-        "Work on a personal project",
-        "Do a random act of kindness",
-        "Take a power nap",
-        "Try a new workout routine",
-        "Research a topic you're curious about",
-        "Take photos for a personal project",
-        "Visit a new place in your town",
-        "Sketch or doodle something",
-        "Reflect on your day and note highlights",
-        "Do something creative",
-        "Start planning for a future trip",
-        "Update your resume or LinkedIn",
-        "Declutter a section of your home",
-        "Set new personal goals",
-        "Learn to juggle",
-        "Write a poem or short story",
-        "Take a digital detox for an hour",
-        "Rearrange your furniture",
-        "Listen to a new music genre",
-        "Try learning a new language",
-        "Give yourself a compliment",
-        "Call a family member",
-        "Create a vision board",
-        "Play a brain game or puzzle",
-        "Do a 10-minute home workout",
-        "Start a new DIY project",
-        "Watch a documentary",
-        "Attend a virtual event or webinar",
-        "Write an email to your future self",
-        "Make a budget plan",
-        "Declutter your phone apps",
-        "Write a blog post or journal entry",
-        "Go to a park and observe nature",
-        "Make a gratitude list",
-        "Learn a new magic trick",
-        "Revisit your goals for the year",
-        "Plan your next big adventure",
-        "Do something spontaneous",
-        "Practice mindfulness",
-        "Write a letter to your younger self",
-        "Create a playlist for your mood",
-        "Clean your car",
-        "Get outside and take photos of nature",
-        "Start a garden",
-        "Explore a nearby museum or art gallery",
-        "Take an online quiz to discover something new",
-        "Write a short thank-you note to someone",
-        "Find and try a new hobby",
-        "Plan a themed movie night",
-        "Revisit old childhood memories",
-        "Reorganize your closet",
-        "Try a new workout challenge",
-        "Create a self-care routine",
-        "Learn how to make a new craft",
-        "Take a virtual tour of a famous location",
-        "Try learning basic sign language",
-        "Experiment with photography techniques",
-        "Write a letter to a future friend",
-        "Design a vision board for your life goals",
-        "Listen to an audiobook",
-        "Practice your handwriting",
-        "Take a creative writing challenge",
-        "Try a different meditation style",
-        "Learn the basics of coding",
-        "Write a gratitude journal entry",
-        "Find a hobby you used to love and try it again",
-        "Host a virtual hangout with friends",
-        "Play a new strategy game",
-        "Go through old music playlists and rediscover gems",
-        "Take a bubble bath and relax",
-        "Create a list of life goals",
-        "Get into a new workout routine",
-        "Try a virtual escape room with friends",
-        "Research a topic you've always wanted to learn about",
-        "Host a solo movie marathon",
-        "Make a list of things you're grateful for",
-        "Learn how to knit or crochet",
-        "Create a personal bucket list",
-        "Take a break to enjoy your favorite treat",
-        "Try an online puzzle challenge",
-        "Go through old photographs and make a scrapbook",
-        "Spend time working on a new project",
-        "Make a vision board for your career goals",
-        "Take a short walk without your phone",
-        "Read an inspiring biography",
-        "Write down your goals for the next 5 years",
-        "Start a new weekly habit",
-        "Learn a fun dance routine",
-        "Try cooking a meal from a different culture",
-        "Plan your dream vacation",
-        "Try a new hobby for 30 days",
-        "Write a list of things you’re proud of",
-        "Redecorate your workspace or room",
-        "Take an online personality quiz",
-        "Create a time capsule with current favorites",
-        "Start a gratitude jar",
-        "Try something outside your comfort zone",
-        "Organize your digital files and photos",
-        "Review your finances and make a savings plan",
-        "Create a self-care checklist",
-        "Practice a new language on Duolingo",
-        "Go to a new coffee shop or restaurant",
-        "Take an online photography class",
-        "Make your own vision board",
-        "Write a review for a book or product",
-        "Do a 30-minute home cleaning session",
-        "Try a new type of workout video",
-        "Pick a random charity to donate to",
-        "Organize your Pinterest boards",
-        "Write a letter to your future self in 10 years",
-        "Do a DIY home improvement project",
-        "Reconnect with a childhood friend",
-        "Do a random act of kindness for someone",
-        "Make a list of things to accomplish this year"
-    ];
+    const placeHolders = ["Do math homework", "Email boss", "Take a break", "Prep for Debate", "Try and figure what's wrong with Tabroom", "Finish that lego set", "Learn something new", "Journal", "Congratulate myself", "Read a chapter of a book", "Call a friend", "Watch an educational video", "Go for a walk", "Write a letter to someone", "Organize your workspace", "Make a to-do list", "Meditate for 10 minutes", "Plan your week", "Learn a new skill online", "Clean out your email inbox", "Write down a dream or goal", "Practice a hobby", "Stretch and do some light exercise", "Try a new recipe", "Plan your meals for the week", "Sort through old clothes", "Listen to a podcast", "Work on a personal project", "Do a random act of kindness", "Take a power nap", "Try a new workout routine", "Research a topic you're curious about", "Take photos for a personal project", "Visit a new place in your town", "Sketch or doodle something", "Reflect on your day and note highlights", "Do something creative", "Start planning for a future trip", "Update your resume or LinkedIn", "Declutter a section of your home", "Set new personal goals", "Learn to juggle", "Write a poem or short story", "Take a digital detox for an hour", "Rearrange your furniture", "Listen to a new music genre", "Try learning a new language", "Give yourself a compliment", "Call a family member", "Create a vision board", "Play a brain game or puzzle", "Do a 10-minute home workout", "Start a new DIY project", "Watch a documentary", "Attend a virtual event or webinar", "Write an email to your future self", "Make a budget plan", "Declutter your phone apps", "Write a blog post or journal entry", "Go to a park and observe nature", "Make a gratitude list", "Learn a new magic trick", "Revisit your goals for the year", "Plan your next big adventure", "Do something spontaneous", "Practice mindfulness", "Write a letter to your younger self", "Create a playlist for your mood", "Clean your car", "Get outside and take photos of nature", "Start a garden", "Explore a nearby museum or art gallery", "Take an online quiz to discover something new", "Write a short thank-you note to someone", "Find and try a new hobby", "Plan a themed movie night", "Revisit old childhood memories", "Reorganize your closet", "Try a new workout challenge", "Create a self-care routine", "Learn how to make a new craft", "Take a virtual tour of a famous location", "Try learning basic sign language", "Experiment with photography techniques", "Write a letter to a future friend", "Design a vision board for your life goals", "Listen to an audiobook", "Practice your handwriting", "Take a creative writing challenge", "Try a different meditation style", "Learn the basics of coding", "Write a gratitude journal entry", "Find a hobby you used to love and try it again", "Host a virtual hangout with friends", "Play a new strategy game", "Go through old music playlists and rediscover gems", "Take a bubble bath and relax", "Create a list of life goals", "Get into a new workout routine", "Try a virtual escape room with friends", "Research a topic you've always wanted to learn about", "Host a solo movie marathon", "Make a list of things you're grateful for", "Learn how to knit or crochet", "Create a personal bucket list", "Take a break to enjoy your favorite treat", "Try an online puzzle challenge", "Go through old photographs and make a scrapbook", "Spend time working on a new project", "Make a vision board for your career goals", "Take a short walk without your phone", "Read an inspiring biography", "Write down your goals for the next 5 years", "Start a new weekly habit", "Learn a fun dance routine", "Try cooking a meal from a different culture", "Plan your dream vacation", "Try a new hobby for 30 days", "Write a list of things you’re proud of", "Redecorate your workspace or room", "Take an online personality quiz", "Create a time capsule with current favorites", "Start a gratitude jar", "Try something outside your comfort zone", "Organize your digital files and photos", "Review your finances and make a savings plan", "Create a self-care checklist", "Practice a new language on Duolingo", "Go to a new coffee shop or restaurant", "Take an online photography class", "Make your own vision board", "Write a review for a book or product", "Do a 30-minute home cleaning session", "Try a new type of workout video", "Pick a random charity to donate to", "Organize your Pinterest boards", "Write a letter to your future self in 10 years", "Do a DIY home improvement project", "Reconnect with a childhood friend", "Do a random act of kindness for someone", "Make a list of things to accomplish this year"]
 
     const specialPlaceholder = "Wish the creator of this website happy birthday.";
     const today = new Date();
@@ -204,6 +63,15 @@ function randomHolder() {
 
 let items = []
 const itemsDiv = document.getElementById("items")
+
+function text1(){
+    const dateControl = document.querySelector('input[type="datetime-local"]');
+    const text = document.getElementById("work")  
+    dateControl.addEventListener("change", () => {
+        const d = new Date(dateControl.valueAsNumber);
+        text.innerText = `${inputElement.value} resolves to ${inputElement.valueAsNumber}, \nwhich is ${d.toDateString()} at ${d.toTimeString()}`;
+    })
+}
 
 function renderItems() {
     itemsDiv.innerHTML = "";
@@ -302,4 +170,4 @@ function removeItems (idx){
     saveItems()
 }
 
-document.addEventListener("DOMContentLoaded",loadItems)
+document.addEventListener("DOMContentLoaded",loadItems) 
