@@ -76,6 +76,11 @@ h2{
 
 #meeting-time{
     margin: 1%;
-    width: 98%;
+    width: 65%;
+    margin-top: -1%;
+}
+#time-control{
+    margin: 1%;
+    width: 24%;
     margin-top: -1%;
 }
