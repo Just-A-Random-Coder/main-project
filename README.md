@@ -1,4 +1,4 @@
-![License]([https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)) 
+![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg) 
 # main-project
 ## License
 
