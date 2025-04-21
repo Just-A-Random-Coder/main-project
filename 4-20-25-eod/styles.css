@@ -1,0 +1,104 @@
+/*
+Om Kanabar 2025
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+(CC BY-NC-SA 4.0).
+
+You are free to:
+- Share: copy and redistribute the material in any medium or format
+- Adapt: remix, transform, and build upon the material
+
+Under the following terms:
+- Attribution: You must give appropriate credit to me, Om Kanabar, provide a link to the license, and indicate if changes were made.
+- NonCommercial: You may not use the material for commercial purposes.
+- ShareAlike: If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+License details: https://creativecommons.org/licenses/by-nc-sa/4.0/
+*/
+ html,
+ body{
+     background-color:#323b3d;
+     margin: 0;
+     font-family: Josefin Sans;
+     color: aliceblue;
+ }
+ .topnav{
+     overflow: hidden;
+     background-color: #062a47;
+     font-size: 30px;
+ }
+ .topnav a {
+     float: left;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 20px 26px;
+     text-decoration: none;
+     font-family: "Josefin Sans", sans-serif;
+     font-size: 17px;
+     transition: background-color 0.2s ease-in-out
+ }
+ .topnav a:hover {
+     background-color: #b8d9e0;
+     color: #062a47;
+ }
+ .topnav a.active{
+     background-color:#1a4b73;
+     color:#f2f2f2;
+ }
+ .topnav a.active:hover{
+    background-color:#17609c;
+    color:#f2f2f2;
+}
+ .maintitle{
+     background-color:#b8d9e0;
+     color:#062a47;
+     font-size:150px;
+     font-family: Monoton;
+     text-align:center;
+ }
+ .submain{
+     background-color:#b8d9e0;
+     color:black;
+     font-family: Josefin Sans;
+     font-size:20px;
+     text-align:center;
+ }
+ #addTaskbtn{
+     width:98%;
+     margin:1%;
+     margin-top: -0.5%;
+ }
+ h2{
+     text-align: center;
+ }
+ .delete-btn {
+     background: none;
+     border: none;
+     color: red !important;
+     font-size: 14px;
+     padding: 4px;
+     cursor: pointer;
+     /*display: none; Initially hidden */
+     align-items: center;
+ }
+ .delete-btn i {
+     font-size: 20px !important; /* Smaller icon */
+ }
+ .delete-btn:hover,
+ .delete-btn:hover i {
+     color: rgb(185, 0, 0) !important;
+     transition: 0.15s ease-in-out;
+ }
+ 
+ #meeting-time{
+     margin: 1%;
+     width: 98%;
+     margin-top: -1%;
+ }
+
+ .checktime{
+    transform: scale(1.5);
+    margin-right: 1em;
+ }
+.footer {
+    width: 100%;
+}
